@@ -7,81 +7,95 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Jayant Baid">
         <title>Contact Us</title>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="styling/style.css">
+        <script src="js/main.js" defer></script>
     </head>
 
     <body>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li>
-                    <!-- / points to the home page and # points to the top  -->
-                    <!-- <a href="/">Home</a> -->
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <!-- <a href="/#about">About LTS</a> -->
-                    <a href="index.html#about">About LTS</a>
-                </li>
-                <li>
-                    <a href="index.html#menu">Our Menu</a>
-                </li>
-                <li>
-                    <a href="hours.html">Store Hours</a>
-                </li>
-            </ul>
-        </nav>
-
-        <figure>
-            <img src="images/tacos_close_up_400x260.png" alt="Tacos Closeup">
-            <figcaption>
-                Little Taco Shop Tacos
-            </figcaption>
-        </figure>
-
-        <h2>Our Contact Form</h2>
-        <form action="https://httpbin.org/get" method="get">
-            <fieldset>
-                <legend>Send Us A Message</legend>
-
-                <p>
-                    <label for="Name">Name:</label>
-                    <input type="text" name="Name" id="Name" placeholder="your name">
-                </p>
-                <p>
-                    <label for="Email">Email:</label>
-                    <input type="email" name="Email" id="Email" placeholder="your email">
-                </p>
-                <p>
-                    <label for="Message">Your Message:</label>
-                    <br>
-                    <textarea name="Your Message" id="Message" cols="30" rows="10"
-                        placeholder="Type your message here"></textarea>
-                </p>
-            </fieldset>
-            <button type="submit">Send</button>
-            <button type="reset">Reset</button>
-        </form>
-
-        <section>
-            <h2>Our Location</h2>
-            <address>
-                555 Taco Temptation Lane, Suite T
-                <br>
-                Kansas City, MO 55555-5555
-                <br>
-                <br>
-                Phone: <a href="tel:+555-555-5555">555-555-5555</a>
-            </address>
-            <br>
-            <nav>
-                <a href="#">Back to Top</a>
+        <header class="header">
+            <h1 class="header__h1">Little Taco Shop</h1>
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li>
+                        <!-- / points to the home page and # points to the top  -->
+                        <!-- <a href="/">Home</a> -->
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="hours.html">Hours</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                </ul>
             </nav>
+        </header>
+
+        <section class="hero">
+            <figure>
+                <img src="images/tacos_close_up_1000x649.png" alt="Tacos Closeup Shot" title="Tacos ready to eat!"
+                    width="1000" height="649">
+                <figcaption class="offscreen">
+                    Little Taco Shop Tacos
+                </figcaption>
+            </figure>
         </section>
-        <hr>
-        <p>
-            Copyright &copy; The Little Taco Shop
+
+        <main class="main">
+            <article class="main__article">
+                <h2>Our Location</h2>
+                <address>
+                    555 Taco Temptation Lane, Suite T
+                    <br>
+                    Kansas City, MO 55555-5555
+                    <br>
+                    <br>
+                    Phone: <a href="tel:+555-555-5555">555-555-5555</a>
+                </address>
+            </article>
+
+            <hr>
+
+            <article class="main__article contact">
+                <h2 class="contact__h2">Our Contact Form</h2>
+                <form action="https://httpbin.org/get" method="get" class="contact__form">
+                    <fieldset class="contact__fieldset">
+                        <legend class="offscreen">Send Us A Message</legend>
+
+                        <p class="contact__p">
+                            <label class="contact__label" for="Name">Name:</label>
+                            <input class="contact__input" type="text" name="Name" id="Name" placeholder="your name">
+                        </p>
+                        <p class="contact__p">
+                            <label class="contact__label" for="Email">Email:</label>
+                            <input class="contact__input" type="email" name="Email" id="Email" placeholder="your email">
+                        </p>
+                        <p class="contact__p">
+                            <label class="contact__label" for="Message">Your Message:</label>
+                            <br>
+                            <textarea class="contact__textarea" name="Your Message" id="Message" cols="30" rows="10"
+                                placeholder="Type your message here"></textarea>
+                        </p>
+                    </fieldset>
+                    <button class="contact__button" type="submit">Send</button>
+                    <button class="contact__button" type="reset">Reset</button>
+                </form>
+            </article>
+
+        </main>
+        <p class="center">
+            <a href="#">Back to Top</a>
         </p>
+        <footer class="footer">
+            <p>
+                <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+                <span class="nowrap">Little Taco Shop</span>
+            </p>
+        </footer>
     </body>
 
 </html>
